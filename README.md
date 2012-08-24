@@ -1,6 +1,13 @@
 android-ivr
 ===========
 
+Modules we need to build
+- Audio recorderer
+- DTMF interpreter from recorded audio stream
+- VXML engine (don't like VXML too much standard is better)
+- Call handler
+
+Useful links
 http://java-dtmf.sourceforge.net/
 http://henryranch.net/software/java-dtmf-detector/
 http://developer.android.com/reference/android/media/MediaRecorder.html
