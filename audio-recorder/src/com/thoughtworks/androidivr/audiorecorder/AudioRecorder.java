@@ -9,33 +9,28 @@ import java.io.IOException;
 
 public class AudioRecorder extends Activity {
     private static final String LOG_TAG = "AudioRecorder";
-    private static String mFileName = null;
-    private MediaRecorder mRecorder = null;
+    private String fileName;
+    private MediaRecorder mediaRecorder = null;
 
     public AudioRecorder() {
-        mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
-        mFileName += "/audiorecordtest.3gp";
+        fileName = String.format("%s/temp-audio-file.mp3", Environment.getExternalStorageDirectory().getAbsolutePath());
+        Log.i(LOG_TAG, "Writing to file: " + fileName);
     }
 
     public void start() throws IOException {
-        mRecorder = new MediaRecorder();
-        mRecorder.setAudioSource(MediaRecorder.AudioSource.VOICE_DOWNLINK);
-        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mRecorder.setOutputFile(mFileName);
-        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        mRecorder.prepare();
+        mediaRecorder = new MediaRecorder();
+        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT);
+        mediaRecorder.setOutputFile(fileName);
+        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        mediaRecorder.prepare();
+        mediaRecorder.start();
     }
 
     public void stop() {
-        mRecorder.stop();
-        mRecorder.release();
-        mRecorder = null;
-    }
-
-    public void cleanup() {
-        if (mRecorder != null) {
-            mRecorder.release();
-            mRecorder = null;
-        }
+        Log.i(LOG_TAG, "Stopping audio recorder");
+        mediaRecorder.stop();
+        mediaRecorder.release();
+        mediaRecorder = null;
     }
 }
