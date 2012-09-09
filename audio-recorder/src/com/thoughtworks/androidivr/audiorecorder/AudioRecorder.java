@@ -1,36 +1,40 @@
 package com.thoughtworks.androidivr.audiorecorder;
 
-import android.app.Activity;
-import android.media.MediaRecorder;
-import android.os.Environment;
 import android.util.Log;
+import com.thoughtworks.androidivr.audiostream.SamplingSpec;
 
 import java.io.IOException;
 
-public class AudioRecorder extends Activity {
-    private static final String LOG_TAG = "AudioRecorder";
-    private String fileName;
-    private MediaRecorder mediaRecorder = null;
+public class AudioRecorder {
+    private final AudioRecorderImpl audioRecorder;
+    private Thread thread;
+    private static final String LOG_TAG = AudioRecorder.class.getName();
+    private boolean isStopped;
 
-    public AudioRecorder() {
-        fileName = String.format("%s/temp-audio-file.mp3", Environment.getExternalStorageDirectory().getAbsolutePath());
-        Log.i(LOG_TAG, "Writing to file: " + fileName);
+    public AudioRecorder(SamplingSpec samplingSpec) throws IOException {
+        audioRecorder = new AudioRecorderImpl(samplingSpec);
     }
 
-    public void start() throws IOException {
-        mediaRecorder = new MediaRecorder();
-        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT);
-        mediaRecorder.setOutputFile(fileName);
-        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        mediaRecorder.prepare();
-        mediaRecorder.start();
+    public void start() {
+        thread = new Thread(audioRecorder);
+        thread.start();
     }
 
     public void stop() {
-        Log.i(LOG_TAG, "Stopping audio recorder");
-        mediaRecorder.stop();
-        mediaRecorder.release();
-        mediaRecorder = null;
+        isStopped = true;
+        audioRecorder.stop();
+        while (thread.isAlive()) {
+            try {
+                Log.i(LOG_TAG, "Waiting for the recorder to stop");
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                Log.e(LOG_TAG, "", e);
+            }
+        }
+        audioRecorder.saveToFile();
+    }
+
+    public boolean isStopped() {
+        return isStopped;
     }
 }
