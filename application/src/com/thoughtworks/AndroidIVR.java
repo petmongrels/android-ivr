@@ -9,6 +9,9 @@ import com.thoughtworks.androidivr.audiostream.sampling.SamplingSpec;
 
 import java.io.IOException;
 
+//hdiutil attach ~/.android/avd/Samsung_Nexus_S.avd/sdcard.img
+// ddms from tools
+// adb pull
 public class AndroidIVR extends Activity {
     private AudioStreamProcessor audioStreamProcessor;
 //    44100

@@ -23,7 +23,7 @@ public class AudioRecorderImpl implements Runnable {
 
     private void record() throws IOException {
         Log.i(LOG_TAG, "Start recording");
-        androidRecorder = new AudioRecord(MediaRecorder.AudioSource.VOICE_DOWNLINK, samplingSpec.sampleRate(), samplingSpec.channelIn(), samplingSpec.audioEncoding(), samplingSpec.bufferSize());
+        androidRecorder = new AudioRecord(MediaRecorder.AudioSource.MIC, samplingSpec.sampleRate(), samplingSpec.channelIn(), samplingSpec.audioEncoding(), samplingSpec.bufferSize());
         if (androidRecorder.getState() != AudioRecord.STATE_INITIALIZED) {
             Log.e(LOG_TAG, "AudioRecord initialization failed");
             throw new RuntimeException("AudioRecord initialization failed");
