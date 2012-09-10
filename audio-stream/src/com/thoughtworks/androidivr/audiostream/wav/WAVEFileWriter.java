@@ -1,21 +1,21 @@
-package com.thoughtworks.androidivr.audiostream;
+package com.thoughtworks.androidivr.audiostream.wav;
 
 import android.util.Log;
+import com.thoughtworks.androidivr.audiostream.AudioStreamListener;
+import com.thoughtworks.androidivr.audiostream.sampling.SamplingSpec;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class WAVEFile {
+public class WAVEFileWriter implements AudioStreamListener {
     private RandomAccessFile fileWriter;
     private File file;
-    private SamplingSpec samplingSpec;
-    private static final String LOG_TAG = WAVEFile.class.getName();
+    private static final String LOG_TAG = WAVEFileWriter.class.getName();
     private int totalNumberOfBytes;
 
-    public WAVEFile(File file, SamplingSpec samplingSpec) throws IOException {
+    public WAVEFileWriter(File file, SamplingSpec samplingSpec) throws IOException {
         this.file = file;
-        this.samplingSpec = samplingSpec;
         fileWriter = new RandomAccessFile(file, "rw");
 
         fileWriter.setLength(0); // Set file length to 0, to prevent unexpected behavior in case the file already existed
@@ -41,16 +41,22 @@ public class WAVEFile {
             Log.i(LOG_TAG, String.format("Total number of bytes written=%d", totalNumberOfBytes));
         } catch (IOException e) {
             Log.e(LOG_TAG, "", e);
+            throw new RuntimeException(e);
         }
     }
 
-    public void close() throws IOException {
-        fileWriter.seek(4); // Write size to RIFF header
-        fileWriter.writeInt(Integer.reverseBytes(36 + totalNumberOfBytes));
-        fileWriter.seek(40); // Write size to Subchunk2Size field
-        fileWriter.writeInt(Integer.reverseBytes(totalNumberOfBytes));
-        fileWriter.close();
+    public void close() {
+        try {
+            fileWriter.seek(4); // Write size to RIFF header
+            fileWriter.writeInt(Integer.reverseBytes(36 + totalNumberOfBytes));
+            fileWriter.seek(40); // Write size to Subchunk2Size field
+            fileWriter.writeInt(Integer.reverseBytes(totalNumberOfBytes));
+            fileWriter.close();
 
-        Log.i(LOG_TAG, String.format("File size=%d", file.length()));
+            Log.i(LOG_TAG, String.format("File size=%d", file.length()));
+        } catch (IOException e) {
+            Log.e(LOG_TAG, "", e);
+            throw new RuntimeException(e);
+        }
     }
 }

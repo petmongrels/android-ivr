@@ -1,4 +1,4 @@
-package com.thoughtworks.androidivr.audiostream;
+package com.thoughtworks.androidivr.audiostream.sampling;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -22,7 +22,7 @@ public class SamplingSpec {
     }
 
     public short numberOfChannels() {
-        return (short) (AudioFormat.ENCODING_PCM_16BIT == audioEncoding ? 2 : 1);
+        return (short) (AudioFormat.CHANNEL_IN_STEREO == audioEncoding ? 2 : 1);
     }
 
     public short sampleSizeInBits() {
@@ -51,5 +51,9 @@ public class SamplingSpec {
 
     public int framePeriod() {
         return bufferSize() / ( sampleSizeInBits() * sampleRate * numberOfChannels() / 8 );
+    }
+
+    public short frameSizeInBytes(short frameSize) {
+        return (short) (frameSize * sampleSizeInBytes());
     }
 }
