@@ -1,0 +1,1250 @@
+{
+	"info": {
+		"_postman_id": "5ddd5153-6c67-4172-8ae8-11dc842c6b0e",
+		"name": "Avni Data Setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Create Location Type - State",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a26f2f5a-b9ae-42d4-b089-8eeb8ddad9e4",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e1a2666e-ed28-4b2c-a603-4f82df366e23",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"State\",\n    \"level\": \"3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/addressLevelType"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location Type - District",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6ba440e2-c476-484c-ba7c-0bfa1840ed9a",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "77230f89-b2de-4d4d-9fce-e07a4eafdf8e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"District\",\n    \"level\": \"2\",\n    \"parent\": {\n        \"name\": \"State\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/addressLevelType"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location Type - City",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "182f2e48-29ac-44a9-8de1-7d5d65b504ab",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "61d13c17-6f7b-468c-9304-40286a4133b8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"City\",\n    \"level\": \"1\",\n    \"parent\": {\n        \"name\": \"District\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/addressLevelType"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location - State 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a080413d-fdc8-4067-8d6b-4831a0c2bb07",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"State 1\", response[\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e5e32653-a6e7-48d2-a06e-701f5e3358cd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"State 1\",\n        \"level\": 1,\n        \"type\": \"State\",\n        \"parents\": [\n            {}\n        ]\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/locations"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location - District 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4ee51a0-90b2-43f4-89f5-6caec4abbe29",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"District 1\", response[\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "db5eadbb-b78c-48c0-a051-63a4de6b5b00",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"District 1\",\n        \"level\": 2,\n        \"type\": \"District\",\n        \"parent\": {\n            \"id\": {{State 1}}\n        }\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/locations"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location - City 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3dd0f034-81d1-42d8-ac54-a0e96d9dbef5",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"City 1\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"City 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "092a9822-7f97-46e7-8a6b-8017dffb8bd3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"City 1\",\n        \"level\": 3,\n        \"type\": \"City\",\n        \"parent\": {\n            \"id\": {{State 1}}\n        }\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/locations"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "053db762-1ab5-435c-af1c-3fab03af2358"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Cognito Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "76e1ec77-2aa1-4c20-abfa-3d42954b0309",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "314d506c-51b6-4260-8c2f-4705359f8af7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{origin}}/cognito-details"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Syncs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "09cd593e-9c4f-4726-a8f1-e6e17c835361",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "879910e0-7c72-46bd-a01a-e07490c75429",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/resetSyncs?lastModifiedDateTime=1900-01-01T00:00:00.000Z&now=2022-08-22T06:31:29.253Z&size=100&page=0",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"resetSyncs"
+							],
+							"query": [
+								{
+									"key": "lastModifiedDateTime",
+									"value": "1900-01-01T00:00:00.000Z"
+								},
+								{
+									"key": "now",
+									"value": "2022-08-22T06:31:29.253Z"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Catchment 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d1fed020-1f8e-47c6-833e-321eb3899a94",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Catchment 1\", response[\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e0e38bee-a4f2-49fb-98c3-ca6128da2747",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"deleteFastSync\": false,\n    \"name\": \"Catchment 1\",\n    \"locationIds\": [\n        {{City 1}}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/catchment"
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Catchment to User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b54f911b-d2cf-404b-b253-ee91ba9dbc47",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "2317996b-95c6-4fc9-b8a8-2c2887e783a7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin@example\",\n    \"name\": \"Example ka Admin\",\n    \"id\": 2,\n    \"organisationId\": 2,\n    \"email\": \"foo@example.com\",\n    \"phoneNumber\": \"+919090909090\",\n    \"disabledInCognito\": false,\n    \"operatingIndividualScope\": \"ByCatchment\",\n    \"settings\": null,\n    \"syncSettings\": {},\n    \"roles\": [\n        \"organisation_admin\",\n        \"user\"\n    ],\n    \"catchmentId\": {{Catchment 1}},\n    \"voided\": false,\n    \"admin\": false,\n    \"orgAdmin\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/user/2"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "50f025a3-d5ce-4425-9cc5-a3bf69e3cb6c"
+		},
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Create Menu Items",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c0363888-05ec-46a7-871e-1dd3bb394bff",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Menu Item 1\", response[0][\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "9a2b7986-465f-4381-9b03-6cadd75b6c45",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"group\": \"Functionality\",\n        \"type\": \"Link\",\n        \"displayKey\": \"dawa-prapatra\",\n        \"linkFunction\": \"({params}) => {return `https://reporting.avniproject.org/public/question/11265388-5909-438e-9d9a-6faaa0c5863f?username=${encodeURIComponent(user.username)}&name=${encodeURIComponent(user.name)}&month=${params.moment().month() + 1}&year=${params.moment().year()}`;}\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/menuItems"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Menu Item 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "516657b9-c288-4166-b14c-35579275c6f7",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "4c0f3dad-f7ff-4e21-aaef-746d7b000f24",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{origin}}/web/menuItem/{{Menu Item 1}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Menu Items",
+					"_postman_id": "187eeb89-34ca-4d41-8882-bf15b4974db1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/menuItem?lastModifiedDateTime=2020-07-24T08:41:27.815Z&size=100&page=0",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"menuItem"
+							],
+							"query": [
+								{
+									"key": "lastModifiedDateTime",
+									"value": "2020-07-24T08:41:27.815Z"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Menu Items",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "27509e94-63a0-43da-b856-575f6fd49e0c",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "0298b487-9f80-4e12-92f6-5efde1c421fc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{origin}}/web/menuItem"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "6628bee5-7cc8-4c16-ad5f-476164bb9c74"
+		},
+		{
+			"name": "App Designer",
+			"item": [
+				{
+					"name": "Create Genders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a9a34a91-ce61-4b63-97a5-1bbc2b3c132f",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "baebaaa9-7e42-4b45-9fa6-9cd5f0079ed7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\"name\": \"Male\", \"uuid\": \"6a15b2bc-a556-41f0-b8c1-a4895ceacb88\"},\n    {\"name\": \"Female\", \"uuid\": \"a8997040-2d01-46b9-899e-03359dafd228\"},\n    {\"name\": \"Other\", \"uuid\": \"a4db848e-45cb-4466-98fe-c195804f2dae\"}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/genders"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subject Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "21595834-9a3c-4bc5-bb24-0e9871d7795d",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Subject Type 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "fc6d08c9-3d17-4f45-b300-e893b69f8b72",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Subject Type 1\",\n    \"groupRoles\": [],\n    \"subjectSummaryRule\": \"\",\n    \"shouldSyncByLocation\": true,\n    \"type\": \"Individual\",\n    \"directlyAssignable\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/subjectType"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subject Type 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "21595834-9a3c-4bc5-bb24-0e9871d7795d",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Subject Type 2\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Subject Type 2 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "8f05e23e-e25e-473b-9ff5-a678d19b5978",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Subject Type 2\",\n    \"groupRoles\": [],\n    \"subjectSummaryRule\": \"\",\n    \"shouldSyncByLocation\": true,\n    \"type\": \"Individual\",\n    \"directlyAssignable\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/subjectType"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Group Subject Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5b91d457-a96a-4b08-be40-c70576e80480",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "ba431ff0-b05b-4de5-a253-9ecd602e2faf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Group Subject Type 1\",\n    \"groupRoles\": [\n        {\n            \"voided\": false,\n            \"groupRoleUUID\": \"274d741c-0772-44be-a5aa-c89ce7ede61b\",\n            \"role\": \"Group Subject Type 1 Member 1\",\n            \"subjectMemberName\": \"Subject Type 1\",\n            \"minimumNumberOfMembers\": 1,\n            \"maximumNumberOfMembers\": 10\n        }\n    ],\n    \"subjectSummaryRule\": \"\",\n    \"shouldSyncByLocation\": true,\n    \"type\": \"Group\",\n    \"memberSubjectType\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/subjectType"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a8616ac2-ddb3-4a67-9938-7d6d2dc21336",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Program 1\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Program 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "f2c23dcd-3388-43ce-bcb3-e647c89a3943",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Program 1\",\n    \"colour\": \"#ff0000\",\n    \"programSubjectLabel\": \"\",\n    \"enrolmentSummaryRule\": \"\",\n    \"subjectTypeUuid\": \"{{Subject Type 1 UUID}}\",\n    \"enrolmentEligibilityCheckRule\": \"\",\n    \"enrolmentEligibilityCheckDeclarativeRule\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/program"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program Encounter Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d6542068-39ed-4406-a0b6-4ff50aca2693",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Program Encounter Type 1\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Program Encounter Type 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "cbb036cd-4ec5-4281-b754-2c3c3f323ac1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Program Encounter Type 1\",\n    \"encounterEligibilityCheckRule\": \"\",\n    \"encounterEligibilityCheckDeclarativeRule\": null,\n    \"subjectTypeUuid\": \"{{Subject Type 1 UUID}}\",\n    \"programUuid\": \"{{Program 1 UUID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/encounterType"
+					},
+					"response": []
+				},
+				{
+					"name": "Add General Encounter Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fbec9d11-0dcb-425b-8a52-ef33da886a0e",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "d98d39ba-8d2b-44e5-b41d-fec350e489ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"General Encounter Type 1\",\n    \"encounterEligibilityCheckRule\": \"\",\n    \"encounterEligibilityCheckDeclarativeRule\": null,\n    \"subjectTypeUuid\": \"{{Subject Type 1 UUID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/encounterType"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "6cf1d250-20b0-4e80-8746-abd759f3fb69"
+		},
+		{
+			"name": "Core Tx Data",
+			"item": [
+				{
+					"name": "Create Subject - 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "58c4efb9-5c82-4546-bd9f-859823137207",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Subject 1\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Subject 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "f83b8333-5f36-4a90-b766-ea83ac1f9c2c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"4a36a342-e511-436f-a201-637d83b79123\",\n    \"firstName\": \"Subject 1\",\n    \"voided\": false,\n    \"dateOfBirth\": null,\n    \"registrationDate\": \"2022-07-13\",\n    \"genderUUID\": null,\n    \"addressLevelUUID\": \"{{City 1 UUID}}\",\n    \"subjectTypeUUID\": \"{{Subject Type 1 UUID}}\",\n    \"observations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": []\n    },\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/individuals"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subject - 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "58c4efb9-5c82-4546-bd9f-859823137207",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Subject 2\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Subject 2 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "e0493b80-4c26-4135-a2d1-8ce62402853b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"ff60679f-1738-4185-9bf6-0047787dcbe4\",\n    \"firstName\": \"Subject 2\",\n    \"voided\": false,\n    \"dateOfBirth\": null,\n    \"registrationDate\": \"2022-07-13\",\n    \"genderUUID\": null,\n    \"addressLevelUUID\": \"{{City 1 UUID}}\",\n    \"subjectTypeUUID\": \"{{Subject Type 2 UUID}}\",\n    \"observations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": []\n    },\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/individuals"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program Enrolment 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "aa2c0c1d-49f9-40d5-97c3-59f6ad6aacc5",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Enrolment 1\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Enrolment 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "562cad18-8ff8-4760-b40d-f7a72510e71b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"7635ec62-2442-44cd-a0fa-a184e935ea4a\",\n    \"voided\": false,\n    \"programUUID\": \"{{Program 1 UUID}}\",\n    \"enrolmentDateTime\": \"2022-07-13T17:26:20+05:30\",\n    \"programExitDateTime\": null,\n    \"programOutcomeUUID\": null,\n    \"individualUUID\": \"{{Subject 1 UUID}}\",\n    \"observations\": [],\n    \"programExitObservations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": [],\n        \"exit\": false\n    },\n    \"checklists\": [],\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/programEnrolments"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program Enrolment 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "aa2c0c1d-49f9-40d5-97c3-59f6ad6aacc5",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Enrolment 1\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Enrolment 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "3881ef8d-160a-4cb9-b4ba-ccb6ce9429b2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"dad083d8-485b-4201-b239-5579fe5a05a0\",\n    \"voided\": false,\n    \"programUUID\": \"{{Program 1 UUID}}\",\n    \"enrolmentDateTime\": \"2022-07-13T17:26:20+05:30\",\n    \"programExitDateTime\": null,\n    \"programOutcomeUUID\": null,\n    \"individualUUID\": \"{{Subject 2 UUID}}\",\n    \"observations\": [],\n    \"programExitObservations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": [],\n        \"exit\": false\n    },\n    \"checklists\": [],\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/programEnrolments"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "9d1a49dc-f155-4345-8658-b85668d12a53"
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create Task Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1cd7e0ec-309a-4472-bc28-9757625ef4d8",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "97274dd8-04be-4c0d-9a62-ef3c1ca75115",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Task Type 1\",\n        \"taskTypeName\": \"Call\",\n        \"metadataSearchFields\": []\n    },\n    {\n        \"name\": \"Task Type 2\",\n        \"taskTypeName\": \"OpenSubject\",\n        \"metadataSearchFields\": []\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/taskTypes"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task Status 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3d985e66-405d-4911-9bc7-a3f45391242a",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "61f71b3b-05ff-42dd-a16e-a896f5a771d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Task Status 1\",\n    \"isTerminal\": \"false\",\n    \"taskTypeId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/taskStatus"
+					},
+					"response": []
+				},
+				{
+					"name": "Create task concepts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a74277fc-0489-4f3a-9b71-ab701e13582b",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "57e65b41-b73f-447e-9012-1959e2a2f477",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"dataType\": \"Text\",\n        \"keyValues\": [\n            {\"key\": \"contact_number\", \"value\": \"yes\"}\n        ],\n        \"name\": \"Contact number\",\n        \"uuid\": \"f6375fda-5ea2-479b-91d9-df5a85172820\"\n    },\n    {\n        \"dataType\": \"Numeric\",\n        \"keyValues\": [],\n        \"name\": \"Duration of talk\",\n        \"uuid\": \"d17f48ca-6cd9-4c6e-a4d8-e6e550b98417\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/concepts"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05bd7182-612b-4634-99b3-fe5ccd50e477",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "65e8e5c3-4ec2-41c8-ba20-22e6c37e3070",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"External ID\": \"071e472f-df83-4a64-977e-9ca4c37176c2\",\n  \"Voided\": false,\n  \"Task type\": \"Task Type 1\",\n  \"Task status\": \"Task Status 1\",\n  \"Name\": \"Task 1\",\n  \"Scheduled on\": \"2022-07-21T17:32:28Z\",\n  \"Completed on\": null,\n  \"Assigned to\": \"admin@example\",\n  \"metadata\": {\n      \"Contact number\": \"9090909090\"\n  },\n  \"observations\": {\n      \"Duration of talk\": 25\n  },\n  \"Subject ID\": \"{{Subject 1 UUID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/api/task"
+					},
+					"response": []
+				},
+				{
+					"name": "Task 1 Form",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df1564a3-5d15-4580-be83-2fbec2ed72d7",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "652361a5-cdef-40e7-ad54-6a38db639771",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Task 1 Form\",\n    \"formType\": \"Task\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/forms"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "fd1faf59-7951-4b23-854d-016aaf6a26d9"
+		},
+		{
+			"name": "Assign Subject 1 to User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9adb0d71-ca84-497a-9a02-445d912de499",
+						"exec": [
+							"pm.test(\"response should be okay\", function () {",
+							"    pm.response.to.not.be.error;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "4599ecac-680a-455a-8367-a27ed781f1f1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin@example\",\n    \"name\": \"Example ka Admin\",\n    \"id\": 2,\n    \"organisationId\": 2,\n    \"email\": \"foo@example.com\",\n    \"phoneNumber\": \"+919090909090\",\n    \"disabledInCognito\": false,\n    \"operatingIndividualScope\": \"None\",\n    \"settings\": null,\n    \"syncSettings\": {},\n    \"roles\": [\n        \"organisation_admin\",\n        \"user\"\n    ],\n    \"catchmentId\": {{Catchment 1}},\n    \"voided\": false,\n    \"admin\": false,\n    \"orgAdmin\": true,\n    \"directAssignmentIds\": [\n        {{Subject 1}}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{origin}}/user/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Individuals",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5262afef-0c07-45aa-8872-9c5918ee5e5c",
+						"exec": [
+							"pm.test(\"response should be okay\", function () {",
+							"    pm.response.to.not.be.error;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "40141d85-06b0-421a-9502-36a4bae817b8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{origin}}/individual?subjectTypeUuid={{Subject Type 1 UUID}}&lastModifiedDateTime=2020-07-24T08:41:27.815Z&size=100&page=0",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"individual"
+					],
+					"query": [
+						{
+							"key": "subjectTypeUuid",
+							"value": "{{Subject Type 1 UUID}}"
+						},
+						{
+							"key": "lastModifiedDateTime",
+							"value": "2020-07-24T08:41:27.815Z"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
