@@ -1201,7 +1201,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Create Dashboard 1",
 					"id": "7a60580c-d6cc-4ec2-8acb-1c277daf7d48",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
