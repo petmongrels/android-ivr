@@ -1211,7 +1211,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Dashboard - 1\",\n    \"description\": \"\",\n    \"sections\": [\n        {\n            \"name\": \"Section 1\",\n            \"description\": \"Section 1 Desc\",\n            \"viewType\": \"Tile\",\n            \"displayOrder\": 1,\n            \"cards\": [\n                {\n                    \"uuid\": \"7874cb37-ced2-4a73-86e1-ff1674ea94cb\",\n                    \"id\": 1,\n                    \"name\": \"ORC - 1\",\n                    \"description\": \"\",\n                    \"color\": \"#ff0000\",\n                    \"standardReportCardTypeId\": 1,\n                    \"iconFileS3Key\": \"\",\n                    \"displayOrder\": 1\n                }\n            ],\n            \"uuid\": \"ec159068-2f3e-41b1-aa7b-db8719fde24a\"\n        }\n    ]\n}",
+							"raw": "{\n    \"name\": \"Dashboard - 1\",\n    \"description\": \"\",\n    \"sections\": [\n        {\n            \"name\": \"Section 1\",\n            \"description\": \"Section 1 Desc\",\n            \"viewType\": \"Tile\",\n            \"displayOrder\": 1,\n            \"cards\": [\n                {\n                    \"uuid\": \"{{Standard Report 1 UUID}}\",\n                    \"id\": {{Standard Report 1}},\n                    \"displayOrder\": 1\n                }\n            ],\n            \"uuid\": \"ec159068-2f3e-41b1-aa7b-db8719fde24a\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
