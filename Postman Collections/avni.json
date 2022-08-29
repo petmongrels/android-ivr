@@ -1162,6 +1162,24 @@
 			"item": [
 				{
 					"name": "Create Standard Report 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "74213555-36f3-442d-a8d8-4ee3f6bec6cc",
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"Standard Report 1\", response[\"id\"]);",
+									"postman.setEnvironmentVariable(\"Standard Report 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "057b70c7-28ea-4b2b-bf8f-a08d2d728a64",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
