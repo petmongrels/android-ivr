@@ -1159,7 +1159,20 @@
 		},
 		{
 			"name": "Mobile Reports",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "057b70c7-28ea-4b2b-bf8f-a08d2d728a64",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "c26e0852-5b8a-4746-b653-3ed4df57cf81"
 		},
 		{
