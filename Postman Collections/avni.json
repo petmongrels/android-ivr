@@ -1161,7 +1161,7 @@
 			"name": "Mobile Reports",
 			"item": [
 				{
-					"name": "Create Offline Report 1",
+					"name": "Create Report 1",
 					"id": "057b70c7-28ea-4b2b-bf8f-a08d2d728a64",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
