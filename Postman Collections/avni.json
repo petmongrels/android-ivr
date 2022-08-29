@@ -1167,8 +1167,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ORC - 1\",\n    \"description\": \"\",\n    \"color\": \"#ff0000\",\n    \"query\": null,\n    \"standardReportCardTypeId\": 1,\n    \"iconFileS3Key\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{origin}}/web/card"
 					},
 					"response": []
 				}
