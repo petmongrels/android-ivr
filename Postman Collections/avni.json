@@ -1333,7 +1333,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Organisation Config",
 			"id": "c3c4a7fc-e2cd-4063-ad6a-c091b605a6d7",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
