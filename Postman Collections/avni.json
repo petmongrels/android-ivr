@@ -33,7 +33,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"State-Example\",\n    \"level\": \"3\"\n}",
+							"raw": "{\n    \"name\": \"State-Example\",\n    \"level\": \"2003\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
