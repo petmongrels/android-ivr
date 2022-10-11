@@ -105,7 +105,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"City-Example\",\n    \"level\": \"1\",\n    \"parent\": {\n        \"name\": \"District-Example\"\n    }\n}",
+							"raw": "{\n    \"name\": \"City-Example\",\n    \"level\": \"2001\",\n    \"parent\": {\n        \"name\": \"District-Example\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
