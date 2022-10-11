@@ -1343,7 +1343,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"uuid\": \"f0d8c376-9832-4d5a-a735-31f8a240dcc3\",\n    \"settings\": {\n        \"languages\": [\"en\"]\n    }\n}",
+					"raw": "{\n    \"settings\": {\n        \"languages\": [\"en\"]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
