@@ -560,7 +560,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\"name\": \"Male\", \"uuid\": \"6a15b2bc-a556-41f0-b8c1-a4895ceacb88\"},\n    {\"name\": \"Female\", \"uuid\": \"a8997040-2d01-46b9-899e-03359dafd228\"},\n    {\"name\": \"Other\", \"uuid\": \"a4db848e-45cb-4466-98fe-c195804f2dae\"}\n]",
+							"raw": "[\n    {\"name\": \"Male-Example\", \"uuid\": \"6a15b2bc-a556-41f0-b8c1-a4895ceacb88\"},\n    {\"name\": \"Female-Example\", \"uuid\": \"a8997040-2d01-46b9-899e-03359dafd228\"},\n    {\"name\": \"Other-Example\", \"uuid\": \"a4db848e-45cb-4466-98fe-c195804f2dae\"}\n]",
 							"options": {
 								"raw": {
 									"language": "json"
