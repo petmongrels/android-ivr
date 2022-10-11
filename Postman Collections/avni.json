@@ -183,7 +183,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"District 1\",\n        \"level\": 2200,\n        \"type\": \"District-Example\",\n        \"parent\": {\n            \"id\": {{State 1}}\n        }\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"District 1\",\n        \"level\": 2002,\n        \"type\": \"District-Example\",\n        \"parent\": {\n            \"id\": {{State 1}}\n        }\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
