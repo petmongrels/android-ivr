@@ -1340,7 +1340,8 @@
 			},
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"url": "{{origin}}/organisationConfig"
 			},
 			"response": []
 		}
