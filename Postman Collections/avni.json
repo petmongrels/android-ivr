@@ -1343,7 +1343,12 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    settings: {}\n}"
+					"raw": "{\n    \"settings\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": "{{origin}}/organisationConfig"
 			},
