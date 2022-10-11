@@ -144,7 +144,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"State 1\",\n        \"level\": 1,\n        \"type\": \"State\",\n        \"parents\": [\n            {}\n        ]\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"State 1\",\n        \"level\": 1,\n        \"type\": \"State-Example\",\n        \"parents\": [\n            {}\n        ]\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
