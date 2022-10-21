@@ -69,7 +69,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"District-Example\",\n    \"level\": \"2002\",\n    \"parent\": {\n        \"name\": \"State-Example\"\n    }\n}",
+							"raw": "{\n    \"name\": \"Sub Division-Example\",\n    \"level\": \"2002\",\n    \"parent\": {\n        \"name\": \"State-Example\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
