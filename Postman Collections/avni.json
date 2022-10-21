@@ -45,7 +45,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Location Type - Division",
+					"name": "Create Location Type - Sub Division",
 					"event": [
 						{
 							"listen": "test",
