@@ -189,7 +189,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Location Type - Municipal",
+					"name": "H2 - Create Location Type - Municipal",
 					"event": [
 						{
 							"listen": "test",
