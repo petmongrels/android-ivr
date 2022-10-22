@@ -237,7 +237,7 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"State 1\", response[\"id\"]);"
+									"pm.collectionVariables.set(\"State 1\", response[\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
