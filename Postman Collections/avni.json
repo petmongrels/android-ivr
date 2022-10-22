@@ -1465,53 +1465,123 @@
 	],
 	"variable": [
 		{
-			"id": "568c92c6-6db0-4573-b87e-b3ac473f9699",
+			"id": "d0785191-40ba-4729-abe7-3cc31ad36ed6",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "39f8c66a-5f41-4f84-beec-0ae62d192b0a",
+			"id": "08f772fb-a0d8-48b0-b9d3-938ed4db3485",
 			"key": "District 1",
 			"value": ""
 		},
 		{
-			"id": "38f0246b-279d-4da6-8e76-2eda122e8c15",
+			"id": "6451a3b9-5761-41c2-8d0a-ca0b956d8036",
 			"key": "Sub Division 1",
 			"value": ""
 		},
 		{
-			"id": "7259ff6f-92a9-4f0c-900d-99d66bbb5822",
+			"id": "6779c829-09a9-44e5-99da-76d9f5d25c3f",
 			"key": "City 1",
 			"value": ""
 		},
 		{
-			"id": "196e89bb-c991-46e1-92f5-318d9f1d881f",
+			"id": "ef425101-e856-4ad5-8703-b9651ef8847f",
 			"key": "City 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "26a1fa22-e1e0-4a5a-9303-05525f8c6cb9",
+			"id": "e8e23dc3-6ed1-41d2-8a90-ad0308853578",
 			"key": "Catchment 1",
 			"value": ""
 		},
 		{
-			"id": "37486f5b-8530-465f-bab7-63cb1cd4486c",
+			"id": "28ff3459-9e55-44d6-97d8-8627e6690d31",
 			"key": "Menu Item 1",
 			"value": ""
 		},
 		{
-			"id": "01a01a44-899b-4437-8217-7a67854daafe",
+			"id": "61c97a51-4d79-43f8-9632-2a18f591d38a",
 			"key": "Subject Type 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "8e9afb83-4618-47ad-ae88-6ab86b71c27c",
+			"id": "5ef596d7-1931-418c-aa1a-a47527a0acdb",
 			"key": "Subject Type 2",
 			"value": ""
 		},
 		{
-			"id": "dfb9eb6c-ee9c-4a2f-b043-5964c46fc170",
+			"id": "37e32a00-5569-4a9f-8dc5-82639ac62e66",
 			"key": "Subject Type 2 UUID",
+			"value": ""
+		},
+		{
+			"id": "ad4ae5ae-d2b4-4c3b-b58d-e03c48f28432",
+			"key": "Program 1",
+			"value": ""
+		},
+		{
+			"id": "90388904-6f23-4047-ad8b-ba9f0c952222",
+			"key": "Program 1 UUID",
+			"value": ""
+		},
+		{
+			"id": "a78ba2e4-785a-4dbc-9f45-adf0c10520f9",
+			"key": "Program Encounter Type 1",
+			"value": ""
+		},
+		{
+			"id": "c29e0bc4-2211-484b-a41a-d4a782cf7dbf",
+			"key": "Program Encounter Type 1 UUID",
+			"value": ""
+		},
+		{
+			"id": "cb905d82-ba4d-4a2b-bb25-6f2053989b46",
+			"key": "Subject 1",
+			"value": ""
+		},
+		{
+			"id": "780a32b9-48d2-4a47-b02b-cf1b254eff65",
+			"key": "Subject 1 UUID",
+			"value": ""
+		},
+		{
+			"id": "eaf98785-fd7e-4b92-9d7e-bb2da5f59789",
+			"key": "Subject 2",
+			"value": ""
+		},
+		{
+			"id": "7a98e5b8-5963-4290-ad56-0161fba0050a",
+			"key": "Subject 2 UUID",
+			"value": ""
+		},
+		{
+			"id": "c59a45e5-df58-4e5d-a940-7816a44f1f50",
+			"key": "Enrolment 1",
+			"value": ""
+		},
+		{
+			"id": "e99091e0-62e6-48df-9e82-081405544c79",
+			"key": "Enrolment 1 UUID",
+			"value": ""
+		},
+		{
+			"id": "95373c7d-f8db-4766-8264-d22b4c500f7f",
+			"key": "Standard Report 1",
+			"value": ""
+		},
+		{
+			"id": "f32bf361-b6cc-44a6-9c13-142a82cfcc0b",
+			"key": "Standard Report 1 UUID",
+			"value": ""
+		},
+		{
+			"id": "0ae1cc29-f328-469a-b345-80365ff1d6f6",
+			"key": "Dashboard 1",
+			"value": ""
+		},
+		{
+			"id": "e0dfdac1-f835-4bca-a3d0-9dd841a86449",
+			"key": "Dashboard 1 UUID",
 			"value": ""
 		}
 	]
