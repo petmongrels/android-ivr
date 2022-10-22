@@ -225,7 +225,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Location - State 1",
+					"name": "H1 - Create Location - State 1",
 					"event": [
 						{
 							"listen": "test",
@@ -1465,12 +1465,12 @@
 	],
 	"variable": [
 		{
-			"id": "005d2495-28c3-4080-8a7f-b2272f01452d",
+			"id": "38164da3-77c7-41e6-90f7-4f1890fb20cb",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "5a27115e-2fb6-4d90-942e-b31aac6b0b65",
+			"id": "26a0fedf-3ef2-4012-b9ea-27e4c15e7642",
 			"key": "District 1",
 			"value": ""
 		}
