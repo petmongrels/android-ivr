@@ -264,7 +264,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Location - District 1",
+					"name": "Create Location - Sub Division 1",
 					"event": [
 						{
 							"listen": "test",
@@ -1465,12 +1465,12 @@
 	],
 	"variable": [
 		{
-			"id": "b8da7c55-4475-4783-9685-0ba554f11b76",
+			"id": "5c9d07a6-2e93-4a71-9ba0-84c15f071d29",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "4687e3ca-db7a-49aa-936f-16bc60ed707d",
+			"id": "daae4b89-ccee-41e6-afd7-916368d6e164",
 			"key": "District 1",
 			"value": ""
 		}
