@@ -9,7 +9,7 @@
 			"name": "Location",
 			"item": [
 				{
-					"name": "Create Location Type - State",
+					"name": "H1 - Create Location Type - State",
 					"event": [
 						{
 							"listen": "test",
