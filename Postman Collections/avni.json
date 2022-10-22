@@ -291,7 +291,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"District 1\",\n        \"level\": 2002,\n        \"type\": \"District-Example\",\n        \"parent\": {\n            \"id\": {{State 1}}\n        }\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"Sub Division 1\",\n        \"level\": 2002,\n        \"type\": \"District-Example\",\n        \"parent\": {\n            \"id\": {{State 1}}\n        }\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1465,12 +1465,12 @@
 	],
 	"variable": [
 		{
-			"id": "4de15929-970c-4768-a40d-cf028ff88687",
+			"id": "098476ac-23b1-4ebd-ad6e-1c13a36b35f4",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "0818d940-aed6-4f0c-8a13-f657d14c1674",
+			"id": "12f4ea38-805e-4a83-b57f-ca16fa6ff6b4",
 			"key": "District 1",
 			"value": ""
 		}
