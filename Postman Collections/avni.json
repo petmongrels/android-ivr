@@ -276,7 +276,7 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"pm.collectionVariables.set(\"Subdivision 1\", response[\"id\"]);"
+									"pm.collectionVariables.set(\"Sub Division 1\", response[\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
@@ -1465,12 +1465,12 @@
 	],
 	"variable": [
 		{
-			"id": "66126d0e-b3cc-4661-9bf1-1854993a9e71",
+			"id": "4de15929-970c-4768-a40d-cf028ff88687",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "85949d9b-073d-4599-b5ff-afd332db1c89",
+			"id": "0818d940-aed6-4f0c-8a13-f657d14c1674",
 			"key": "District 1",
 			"value": ""
 		}
