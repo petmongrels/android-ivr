@@ -276,7 +276,7 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"District 1\", response[\"id\"]);"
+									"pm.collectionVariables.set(\"District 1\", response[\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
