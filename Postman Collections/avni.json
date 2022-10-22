@@ -81,7 +81,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Location Type - City",
+					"name": "H3 - Create Location Type - City",
 					"event": [
 						{
 							"listen": "test",
