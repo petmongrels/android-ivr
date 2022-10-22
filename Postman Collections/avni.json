@@ -276,7 +276,7 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"pm.collectionVariables.set(\"District 1\", response[\"id\"]);"
+									"pm.collectionVariables.set(\"Subdivision 1\", response[\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
@@ -1465,12 +1465,12 @@
 	],
 	"variable": [
 		{
-			"id": "1cf1d3e1-6e6a-4bd5-b14d-1d85fb8d9380",
+			"id": "66126d0e-b3cc-4661-9bf1-1854993a9e71",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "e14e7812-75f1-4242-8f2f-8d05b7f34bf0",
+			"id": "85949d9b-073d-4599-b5ff-afd332db1c89",
 			"key": "District 1",
 			"value": ""
 		}
