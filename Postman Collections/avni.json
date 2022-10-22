@@ -1465,13 +1465,53 @@
 	],
 	"variable": [
 		{
-			"id": "6c685766-e974-41dd-811c-afb9b234c699",
+			"id": "568c92c6-6db0-4573-b87e-b3ac473f9699",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "4c6b7589-033a-4f49-8a72-23927f0d408a",
+			"id": "39f8c66a-5f41-4f84-beec-0ae62d192b0a",
 			"key": "District 1",
+			"value": ""
+		},
+		{
+			"id": "38f0246b-279d-4da6-8e76-2eda122e8c15",
+			"key": "Sub Division 1",
+			"value": ""
+		},
+		{
+			"id": "7259ff6f-92a9-4f0c-900d-99d66bbb5822",
+			"key": "City 1",
+			"value": ""
+		},
+		{
+			"id": "196e89bb-c991-46e1-92f5-318d9f1d881f",
+			"key": "City 1 UUID",
+			"value": ""
+		},
+		{
+			"id": "26a1fa22-e1e0-4a5a-9303-05525f8c6cb9",
+			"key": "Catchment 1",
+			"value": ""
+		},
+		{
+			"id": "37486f5b-8530-465f-bab7-63cb1cd4486c",
+			"key": "Menu Item 1",
+			"value": ""
+		},
+		{
+			"id": "01a01a44-899b-4437-8217-7a67854daafe",
+			"key": "Subject Type 1 UUID",
+			"value": ""
+		},
+		{
+			"id": "8e9afb83-4618-47ad-ae88-6ab86b71c27c",
+			"key": "Subject Type 2",
+			"value": ""
+		},
+		{
+			"id": "dfb9eb6c-ee9c-4a2f-b043-5964c46fc170",
+			"key": "Subject Type 2 UUID",
 			"value": ""
 		}
 	]
