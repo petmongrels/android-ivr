@@ -1281,8 +1281,8 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"Standard Report 1\", response[\"id\"]);",
-									"postman.setEnvironmentVariable(\"Standard Report 1 UUID\", response[\"uuid\"]);"
+									"pm.collectionVariables.set(\"Standard Report 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Standard Report 1 UUID\", response[\"uuid\"]);"
 								],
 								"type": "text/javascript"
 							}
