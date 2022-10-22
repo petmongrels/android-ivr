@@ -1321,8 +1321,8 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"Dashboard 1\", response[\"id\"]);",
-									"postman.setEnvironmentVariable(\"Dashboard 1 UUID\", response[\"uuid\"]);"
+									"pm.collectionVariables.set(\"Dashboard 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Dashboard 1 UUID\", response[\"uuid\"]);"
 								],
 								"type": "text/javascript"
 							}
