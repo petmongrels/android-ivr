@@ -1462,5 +1462,17 @@
 			},
 			"response": []
 		}
+	],
+	"variable": [
+		{
+			"id": "b8da7c55-4475-4783-9685-0ba554f11b76",
+			"key": "State 1",
+			"value": ""
+		},
+		{
+			"id": "4687e3ca-db7a-49aa-936f-16bc60ed707d",
+			"key": "District 1",
+			"value": ""
+		}
 	]
 }
