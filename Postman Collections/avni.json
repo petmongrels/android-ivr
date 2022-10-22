@@ -105,7 +105,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"District-Example\",\n    \"level\": \"2001\",\n    \"parent\": {\n        \"name\": \"Sub Division-Example\"\n    }\n}",
+							"raw": "{\n    \"name\": \"City-Example\",\n    \"level\": \"2001\",\n    \"parent\": {\n        \"name\": \"Sub Division-Example\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1465,12 +1465,12 @@
 	],
 	"variable": [
 		{
-			"id": "aa0bf6f7-fba5-4249-a1b4-a9726fb49e82",
+			"id": "dbde925a-e271-4957-8bc3-2c3231c123e1",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "1302af84-ef0c-4622-9a19-c0e1ede96447",
+			"id": "19563a86-284c-4588-83dd-96ac7187c54d",
 			"key": "District 1",
 			"value": ""
 		}
