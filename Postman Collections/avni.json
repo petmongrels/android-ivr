@@ -441,7 +441,7 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"Catchment 1\", response[\"id\"]);"
+									"pm.collectionVariables.set(\"Catchment 1\", response[\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
