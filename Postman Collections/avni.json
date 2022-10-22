@@ -522,7 +522,7 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"Menu Item 1\", response[0][\"id\"]);"
+									"pm.collectionVariables.set(\"Menu Item 1\", response[0][\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
