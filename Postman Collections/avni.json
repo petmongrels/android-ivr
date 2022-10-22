@@ -213,7 +213,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Municipal-Example\",\n    \"level\": \"2005\",\n    \"parent\": {\n        \"name\": \"Union-Example\"\n    }\n}",
+							"raw": "{\n    \"name\": \"Municipal-Example\",\n    \"level\": \"2005\",\n    \"parent\": {\n        \"name\": \"Rajya-Example\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
