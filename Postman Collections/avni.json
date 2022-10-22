@@ -929,8 +929,8 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"Subject 1\", response[\"id\"]);",
-									"postman.setEnvironmentVariable(\"Subject 1 UUID\", response[\"uuid\"]);"
+									"pm.collectionVariables.set(\"Subject 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Subject 1 UUID\", response[\"uuid\"]);"
 								],
 								"type": "text/javascript"
 							}
