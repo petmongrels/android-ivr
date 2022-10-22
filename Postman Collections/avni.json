@@ -189,7 +189,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Location Type - State Copy",
+					"name": "Create Location Type - Municipal",
 					"event": [
 						{
 							"listen": "test",
