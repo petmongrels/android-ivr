@@ -692,7 +692,7 @@
 									"});",
 									"",
 									"const response = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"Subject Type 1 UUID\", response[\"uuid\"]);"
+									"pm.collectionVariables.set(\"Subject Type 1 UUID\", response[\"uuid\"]);"
 								],
 								"type": "text/javascript"
 							}
