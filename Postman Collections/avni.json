@@ -117,7 +117,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Location Type - Union",
+					"name": "H2 - Create Location Type - Union",
 					"event": [
 						{
 							"listen": "test",
