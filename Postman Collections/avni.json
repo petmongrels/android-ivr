@@ -30,7 +30,13 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "{{auth-token}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"name\": \"State-Example\",\n    \"level\": \"2003\"\n}",
@@ -1463,126 +1469,132 @@
 			"response": []
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d2a099e3-363b-49ba-ac88-e88463b9395c",
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({",
+					"  key: \"foo\",",
+					"  value: pm.collectionVariables.get(\"auth-token\")",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "99221076-e057-412b-89d2-115363a91836",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "b1b8cf9b-4e42-4466-8e9c-3e7d28d8b72a",
 			"key": "State 1",
 			"value": ""
 		},
 		{
-			"id": "a3bbfba3-993e-4586-a944-c31b7e8a4ca2",
 			"key": "District 1",
 			"value": ""
 		},
 		{
-			"id": "3d0f40ef-7cd6-487d-9f00-98a48e661ff4",
 			"key": "Sub Division 1",
 			"value": ""
 		},
 		{
-			"id": "82631cac-5171-435b-8cb3-74a244fad8e5",
 			"key": "City 1",
 			"value": ""
 		},
 		{
-			"id": "56a22373-5bce-48c2-a29a-4b4e2b177e2a",
 			"key": "City 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "a81067ec-89a9-4334-a052-4b90e2569f4a",
 			"key": "Catchment 1",
 			"value": ""
 		},
 		{
-			"id": "85a2aafe-4242-4bc1-96e3-9ced10b676f7",
 			"key": "Menu Item 1",
 			"value": ""
 		},
 		{
-			"id": "a4a1f2e8-9504-42a8-a269-99feb6f7d306",
 			"key": "Subject Type 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "fe900e4c-421a-4845-b9eb-3463819d5457",
 			"key": "Subject Type 2",
 			"value": ""
 		},
 		{
-			"id": "202ded69-a3cb-4e2c-b3f6-4dcda01a1c33",
 			"key": "Subject Type 2 UUID",
 			"value": ""
 		},
 		{
-			"id": "d9c5b624-c891-4961-ad4f-43600ab56900",
 			"key": "Program 1",
 			"value": ""
 		},
 		{
-			"id": "a415e71f-c9e5-4bb9-802c-fcaf90562421",
 			"key": "Program 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "2960bdc3-5a21-4d9c-8a2e-87d95a728e65",
 			"key": "Program Encounter Type 1",
 			"value": ""
 		},
 		{
-			"id": "f502eb66-d68f-4ac7-9c41-abf502ea756c",
 			"key": "Program Encounter Type 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "0fedf390-3307-4d13-bb97-2e8d8ecef5ea",
 			"key": "Subject 1",
 			"value": ""
 		},
 		{
-			"id": "84b39dd0-3efe-402c-b878-1b3d5352a07d",
 			"key": "Subject 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "238734dc-d27b-443b-8ac6-e3fc5a87cdee",
 			"key": "Subject 2",
 			"value": ""
 		},
 		{
-			"id": "936a2dfa-b4b5-4199-8d86-b284075e2bdd",
 			"key": "Subject 2 UUID",
 			"value": ""
 		},
 		{
-			"id": "228987bd-38e1-4c90-8d31-85b52f687a99",
 			"key": "Enrolment 1",
 			"value": ""
 		},
 		{
-			"id": "a52aed13-793a-4f3a-bbdf-5976f265a4fa",
 			"key": "Enrolment 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "a9ba7e52-c6a1-412a-a45d-13ad7902c0fe",
 			"key": "Standard Report 1",
 			"value": ""
 		},
 		{
-			"id": "97e72e82-b659-4843-89f3-68f2ef738f2f",
 			"key": "Standard Report 1 UUID",
 			"value": ""
 		},
 		{
-			"id": "cef302c1-b390-4399-ab48-ca4529dbaf8b",
 			"key": "Dashboard 1",
 			"value": ""
 		},
 		{
-			"id": "941ea9fd-71da-4f75-84d8-2a51644e730f",
 			"key": "Dashboard 1 UUID",
 			"value": ""
+		},
+		{
+			"key": "auth-token",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
